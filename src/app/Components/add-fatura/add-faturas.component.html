@@ -1,0 +1,36 @@
+
+
+<div class="container">
+
+    <mat-card-title>
+        <button mat-raised-button class="btn btn-warn" (click)="voltarParaContrato()"> Volver </button>
+    </mat-card-title>
+
+    <h2 style="margin: 20px 0 20px 40px;" mat-dialog-title> {{titulo}} (Operadora {{nomeOperadoraUrl}}) </h2>
+
+    <div id="containerForm" [formGroup]="formularioFatura">
+        
+        <div class="row">
+            <div class="form-floating contentCampo col-lg-4">
+                <input type="number" class="form-control" id="numValorCobrado" autocomplete="off" formControlName="valorCobrado" placeholder="Valor Cobrado" />
+                <label for="numValorCobrado">Valor Mensal:</label>
+            </div> 
+
+            <div class="form-floating contentCampo col-lg-4">
+                <input type="date" class="form-control" id="txtDataEmissao" autocomplete="off" formControlName="dataEmissao" placeholder="Data de Emissão" />
+                <label for="txtDataInicio">Data de Emissão:</label>
+            </div>  
+
+            <div class="form-floating contentCampo col-lg-4">
+                <input type="date" class="form-control" id="txtDataVencimento" autocomplete="off" formControlName="dataVencimento" placeholder="Data Vencimento" />
+                <label for="txtDataVencimento">Data Vencimento:</label>
+            </div>             
+        </div>    
+        
+        <div id="contentBtn">
+            <button id="btnSalvar" class="btn btn-success" (click)="salvar()"> {{botaoAcao}} </button>
+        </div>
+
+    </div>  
+
+</div>

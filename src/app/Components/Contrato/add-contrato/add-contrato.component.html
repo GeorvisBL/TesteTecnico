@@ -1,0 +1,59 @@
+
+
+<div class="container">
+
+    <mat-card-title>
+        <button mat-raised-button class="btn btn-warn" (click)="voltarParaContrato()"> Volver </button>
+    </mat-card-title>
+
+    <h2 style="margin: 20px 0 20px 40px;" mat-dialog-title> {{titulo}} </h2>
+
+    <div id="containerForm" [formGroup]="formularioContrato">
+        
+        <div class="row">
+            <div class="form-floating contentCampo col-sm-6">
+                <select class="form-select" id="selectOperadora" aria-label="Floating label select example" formControlName="idOperadora" placeholder="Operadora">
+                    <option *ngFor="let operadora of listaOperadoras" [value]="operadora.id"> {{operadora.nomeOperadora}} </option>
+                </select>
+                <label for="selectOperadora">Operadora:</label>                        
+            </div>
+
+            <div class="form-floating contentCampo col-sm-6">
+                <select class="form-select" id="selectPlano" aria-label="Floating label select example" formControlName="idPlano" placeholder="Plano">
+                    <option *ngFor="let plano of listaPlanos" [value]="plano.id"> {{plano.descricao}} </option>
+                </select>
+                <label for="selectPlano">Plano:</label>                        
+            </div> 
+        </div> 
+
+        <div class="row">
+            <div class="form-floating contentCampo col-sm-12">
+                <input type="text" class="form-control" id="txtNomeFilial" autocomplete="off" formControlName="nomeFilial" placeholder="Nome Filial" maxlength="100" />
+                <label for="txtNomeFilial">Nome Filial:</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-floating contentCampo col-sm-4">
+                <input type="date" class="form-control" id="txtDataInicio" autocomplete="off" formControlName="dataInicio" placeholder="Data Inicio" />
+                <label for="txtDataInicio">Data Inicio:</label>
+            </div>  
+
+            <div class="form-floating contentCampo col-sm-4">
+                <input type="date" class="form-control" id="txtDataVencimento" autocomplete="off" formControlName="dataVencimento" placeholder="Data Vencimento" />
+                <label for="txtDataVencimento">Data Vencimento:</label>
+            </div>
+
+            <div class="form-floating contentCampo col-sm-4">
+                <input type="number" class="form-control" id="numValorMensal" autocomplete="off" formControlName="valorMensal" placeholder="Valor Mensal" />
+                <label for="numValorMensal">Valor Mensal:</label>
+            </div>  
+        </div>    
+        
+        <div id="contentBtn">
+            <button id="btnSalvar" class="btn btn-success" (click)="salvar()"> {{botaoAcao}} </button>
+        </div>
+
+    </div>  
+
+</div>

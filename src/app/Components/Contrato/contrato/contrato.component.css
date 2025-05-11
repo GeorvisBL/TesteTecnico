@@ -1,0 +1,16 @@
+
+.table-container { 
+    overflow-x: auto; 
+    padding: 16px; 
+}
+
+#titleContrato{
+    width: 100%;
+    margin: 25px 5%;
+}
+
+table { 
+    width: 100%; 
+    min-width: 600px; 
+}
+

@@ -1,0 +1,40 @@
+
+
+<div class="container">
+
+    <mat-card-title>
+        <button mat-raised-button class="btn btn-warn" (click)="voltarParaOperadora()"> Volver </button>
+    </mat-card-title>
+
+    <h2 style="margin: 20px 0 20px 40px;" mat-dialog-title>{{tituloAcao}} Operadora</h2>
+
+    <div id="containerForm" [formGroup]="formularioOperadora">
+           
+        <div class="row">
+            <div class="form-floating contentCampo col-sm-12">
+                <input type="text" class="form-control" id="txtNomeOperadora" autocomplete="off" formControlName="nomeOperadora" placeholder="Nome da Operadora" maxlength="100" />
+                <label for="txtNomeOperadora">Nome da Operadora:</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-floating contentCampo col-sm-6">
+                <select class="form-select" id="selectTipoServico" aria-label="Floating label select example" formControlName="idTipoServico" placeholder="Tipo de Serviço">
+                    <option *ngFor="let tipoServico of listaTipoServico" [value]="tipoServico.id"> {{tipoServico.descricao}} </option>
+                </select>
+                <label for="selectTipoServico">Tipo de Serviço:</label>                        
+            </div>
+
+            <div class="form-floating contentCampo col-sm-6">
+                <input type="text" class="form-control" id="txtContatoSuporte" autocomplete="off" formControlName="contatoSuporte" placeholder="Contato Suporte" />
+                <label for="txtContatoSuporte">Contato Suporte:</label>
+            </div>  
+        </div>    
+        
+        <div id="contentBtn">
+            <button id="btnSalvar" class="btn btn-success" (click)="guardarEditar_Operadora()"> {{botaoAcao}} </button>
+        </div>
+
+    </div>  
+
+</div>

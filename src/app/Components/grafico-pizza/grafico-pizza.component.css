@@ -1,0 +1,19 @@
+
+#containerGraficPizza{
+    width: 100%;
+    padding: 0 0 50px;
+  }
+  
+  .cabecalhoGraf{
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 17pt;
+    font-weight: 600;
+    color: #6d6b6b;
+  }
+
+#MyChart{
+    width: auto !important;
+    height: 400px !important;
+    margin: 0 auto;
+}

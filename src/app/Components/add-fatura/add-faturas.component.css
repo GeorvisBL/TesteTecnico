@@ -1,0 +1,26 @@
+
+
+#containerForm{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 5px;
+}
+
+
+.contentCampo{
+    height: 75px;
+}
+
+.form-floating>label{
+    left: 14px;
+}
+
+#contentBtn{
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+#btnSalvar{    
+    width: 100%;
+}
